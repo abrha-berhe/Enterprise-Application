@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="ea_db_PU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>miu.edu.abrha.ea_lab01.Student</class>
+    <class>miu.edu.abrha.ea_lab01.Book</class>
+    <class>miu.edu.abrha.HW02_OneToMany.Book3</class>
+    <class>miu.edu.abrha.HW02_OneToMany.Student3</class>
+    <class>miu.edu.abrha.HW02_ManyToMany.Student4</class>
+    <class>miu.edu.abrha.HW02_ManyToMany.Course</class>
+    <class>miu.edu.abrha.HW02_oneToOneBiDirectional.Student</class>
+    <class>miu.edu.abrha.HW02_oneToOneBiDirectional.Book</class>
+    <class>miu.edu.abrha.HW02_oneToOneUniDirectional.Book2</class>
+    <class>miu.edu.abrha.HW02_oneToOneUniDirectional.Student2</class>
+    <class>miu.edu.abrha.HW03_Inheritance_SingleTable.Student_JobSearch1</class>
+    <class>miu.edu.abrha.HW03_Inheritance_SingleTable.Laptop</class>
+    <class>miu.edu.abrha.HW03_Inheritance_SingleTable.Student_CPT1</class>
+    <class>miu.edu.abrha.HW03_Inheritance_SingleTable.Student_OnCampus1</class>
+    <class>miu.edu.abrha.HW03_Inheritance_SingleTable.Student_Parent1</class>
+    <class>miu.edu.abrha.HW03_Inhertiance_JoinedTable.Student_Parent2</class>
+    <class>miu.edu.abrha.HW03_Inhertiance_JoinedTable.Student_OnCampus2</class>
+    <class>miu.edu.abrha.HW03_Inhertiance_JoinedTable.Student_JobSearch2</class>
+    <class>miu.edu.abrha.HW03_Inhertiance_JoinedTable.Student_CPT2</class>
+    <class>miu.edu.abrha.HW04_queryAndLocking.Student_4</class>
+    <class>miu.edu.abrha.HW04_queryAndLocking.Book_4</class>
+    <class>miu.edu.abrha.HW04_queryAndLocking.Author_4</class>
+    <class>miu.edu.abrha.HW04_queryAndLocking.Publisher_4</class>
+    <class>miu.edu.abrha.HW04_queryAndLocking.Address_4</class>
+    <class>miu.edu.abrha.HW05_Callback.Student_5</class>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/ea_db?zeroDateTimeBehavior=CONVERT_TO_NULL"/>
+      <property name="javax.persistence.jdbc.user" value="root"/>
+      <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+      <property name="javax.persistence.jdbc.password" value="mysql"/>
+      <property name="javax.persistence.schema-generation.database.action" value="create"/>
+    </properties>
+  </persistence-unit>
+</persistence>
