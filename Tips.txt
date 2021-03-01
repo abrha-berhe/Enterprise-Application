@@ -1,0 +1,39 @@
+Install Open jdk8 or jdk8 ( From oracle or openlogic.com)
+Install MySQL Server, MySql WorkBench -- installed 8.0.23  ( May need visual c++, redistriutable)
+Create a DB ( Schema)
+Install Apache Netbeans LTS -- installed 12.0
+Download MySql JDBC Connector -- downloaded 8.0.23
+
+Connect Netbeans with MySql 
+   - Services tab, Databases -> JDBC Driver -> Add the jdbc driver jar file --> fill the db, un, pwd and test the connection
+
+- Create new project --> Java file -> Main class with main method
+		     --> Entity Class --> Deal with all fields of the class 
+	             --> Others--> Persistence --> Persistence Unit --> Connect the MySQL DB connection created
+                     --> Add the class into the persistence General proporty list
+                     --> Add MySQL Connector maven dependency in the pom.xml 
+                     --> Complete the work with Entity object 
+
+
+
+In one to one relation shipt
+- The one who has @Mapby 
+- If we dont have @Myby, it means 
+- 
+
+
+
+
+This is probably going to be the least technical answer, so apologies if I get the semantics wrong. But I was frustrated with the complexity of the language in the previous answers, so I decided to post a simple answer:
+
+PESSIMISTIC_READ: you obtain a lock on the record at the start of the transaction, for the purpose of reading only. Basically you're saying "I don't want anyone updating this record while I'm reading it, but I don't mind others reading it as well". That means people also attempting a PESSIMISTIC_READ will succeed, but those attempting a PESSIMISTIC_WRITE will fail
+
+PESSIMISTIC_WRITE: you obtain a lock on the record at the start of the transaction, for the purpose of writing. What you're saying is "I'm going to be updating this record, so no one can read or write to it until I'm done". That means both those attempting a PESSIMISTIC_READ or PESSIMISTIC_WRITE will fail
+
+
+
+
+
+
+
+
