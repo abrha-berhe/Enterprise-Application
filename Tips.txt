@@ -23,8 +23,7 @@ In one to one relation shipt
 
 
 
-
-This is probably going to be the least technical answer, so apologies if I get the semantics wrong. But I was frustrated with the complexity of the language in the previous answers, so I decided to post a simple answer:
+https://stackoverflow.com/questions/1657124/whats-the-difference-between-pessimistic-read-and-pessimistic-write-in-jpa
 
 PESSIMISTIC_READ: you obtain a lock on the record at the start of the transaction, for the purpose of reading only. Basically you're saying "I don't want anyone updating this record while I'm reading it, but I don't mind others reading it as well". That means people also attempting a PESSIMISTIC_READ will succeed, but those attempting a PESSIMISTIC_WRITE will fail
 
